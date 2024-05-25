@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    z-index: 1000;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(19, 2, 72);
+    box-shadow: 5px 5px 25px black;
+}
+
+@media (max-width:668px) {
+    header {
+        display: none;
+    }
+}
+
+header .logo {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+header nav {
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+header nav a {
+    color: whitesmoke;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-top: 20px;
+}
+
+section {
+    position: relative;
+    float: right;
+    width: calc(100% - 250px);
+
+}
+
+@media (max-width:668px) {
+    section {
+        position: relative;
+        float: center;
+        width: 100%;
+    }
+}
+
+.HomeSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.HomeSection.display-none {
+    display: none;
+}
+
+.HomeSection .BlogList {
+    margin: 50px 100px 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.HomeSection .SearchBar {
+    margin-top: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: end;
+}
+
+.HomeSection .SearchBar input {
+    font-size: large;
+    padding: 3px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.HomeSection .BlogList .BlogTitle {
+    display: flex;
+    justify-content: center;
+    color: rgb(30, 4, 107);
+    text-shadow: 1px 1px 1px black;
+}
+
+.HomeSection .BlogList .box {
+    position: relative;
+    border-radius: 10px;
+    width: 250px;
+    height: 360px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.HomeSection .BlogList .box .TitleImg img {
+    border-radius: 10px 10px 0 0;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.HomeSection .BlogList .box .BlogContent p {
+    text-align: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+
+.HomeSection .BlogList .box .boxFooter {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.HomeSection .BlogList .box .boxFooter button {
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    color: white;
+}
+
+.HomeSection .BlogList .box .boxFooter button:nth-child(1) {
+    background-color: rgb(255, 0, 0);
+}
+
+.HomeSection .BlogList .box .boxFooter button:nth-child(2) {
+    background-color: rgb(255, 187, 0);
+}
+
+.AddOrUpdateBlogSection {
+    display: flex;
+    justify-content: center;
+}
+
+.AddOrUpdateBlogSection .form-Title {
+    color: rgb(30, 4, 107);
+}
+
+.AddOrUpdateBlogSection form {
+    box-shadow: 2px 2px 15px black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    width: 750px;
+}
+.AddOrUpdateBlogSection form button {
+    font-size: xx-large;
+    border: none;
+    background-color: rgb(30, 4, 107);
+    color: whitesmoke;
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
+}
+
+.AddOrUpdateBlogSection form .form-Title {
+    margin-bottom: 30px;
+}
+
+.AddOrUpdateBlogSection form .SubmitButton {
+    display: flex;
+    justify-content: end;
+}
+
+.AddOrUpdateBlogSection .form-group label {
+    font-size: large;
+}
+
+.AddOrUpdateBlogSection .form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.AddOrUpdateBlogSection .form-group input[type=text] {
+    border: 5px solid rgb(122, 122, 122);
+    border-radius: 10px;
+    font-size: larger;
+    padding: 5px;
+}
+
+.AddOrUpdateBlogSection .form-group input[type=text]:focus {
+    border: 5px solid rgb(127, 95, 222);
+}
+
+.AddOrUpdateBlogSection .form-group input[type=file] {
+    visibility: hidden;
+}
+
+:focus-visible {
+    outline: rgb(30, 4, 107) auto 5px;
+}
+
+.AddOrUpdateBlogSection .form-group.InputFile label {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(30, 4, 107);
+    color: whitesmoke;
+    border: 1px solid black;
+}
+
+.AddOrUpdateBlogSection .form-group.InputFile label:hover {
+    background-color: rgb(69, 34, 174);
+}
+
+.AddOrUpdateBlogSection .form-group textarea {
+    padding: 5px;
+    border-radius: 10px;
+    border: 5px solid rgb(122, 122, 122);
+    font-size: larger;
+}
+
+.AddOrUpdateBlogSection .form-group textarea:focus {
+    border: 5px solid rgb(127, 95, 222);
+}
+
+.AddOrUpdateBlogSection.display-none {
+    display: none;
+}
+
+:focus-visible {
+    outline: rgb(30, 4, 107) auto 5px;
+}
+
+.BlogView {
+    width: 1000px;
+    margin-top: 100px;
+    margin-right: 10%;
+}
+
+@media (max-width:1000px) {
+    .BlogView {
+        width: calc(100% - 250px);
+        margin-right: 0px;
+    }
+}
+
+.BlogView .TitleImage {
+    height: 350px;
+}
+
+.BlogView .TitleImage img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.BlogView .Title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: xx-large;
+}
