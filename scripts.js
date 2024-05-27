@@ -2,7 +2,7 @@ var bloglist = document.querySelector(".BlogList");
 var SearchInput = document.getElementById("SearchInput");
 
 if (document.getElementById("Addblog")) {
-    document.getElementById("Addblog").addEventListener("submit", (event) => {
+    document.getElementById("Addblog").addEventListener("submit", async (event) => {
         event.preventDefault();
         const title = document.getElementById('title').value;
         const content = document.getElementById('content').value;
@@ -13,13 +13,13 @@ if (document.getElementById("Addblog")) {
         formData.append('title', title);
         formData.append('content', content);
         formData.append('image', image);
-        AddBlog(formData);
+        await AddBlog(formData);
         window.location.href = `${window.location.origin}/Index.html`;
     });
 }
 
 if (document.getElementById("Updateblog")) {
-    document.getElementById("Updateblog").addEventListener("submit", (event) => {
+    document.getElementById("Updateblog").addEventListener("submit", async (event) => {
         event.preventDefault();
         const id = document.getElementById('id').value;
         const title = document.getElementById('title').value;
@@ -32,7 +32,7 @@ if (document.getElementById("Updateblog")) {
         formData.append('title', title);
         formData.append('content', content);
         formData.append('image', image);
-        UpdateBlog(formData);
+        await UpdateBlog(formData);
     });
 }
 

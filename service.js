@@ -37,7 +37,7 @@ async function SearchBlogs(Keyword) {
 
 async function AddBlog(Blog) {
     try {
-        console.log(Blog)
+        console.log(Blog);
         let response = await fetch(url + "/blogs", {
             method: "POST",
             body: Blog
